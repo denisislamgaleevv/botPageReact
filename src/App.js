@@ -15,7 +15,7 @@ function App() {
       <div className='container'>  
        <h1>It's work</h1>
        <img src ={monkey} width ="300px" height = "400px"/>
-       <button onClick = {closeEvent}>Закрыть</button>
+       <button onClick = {closeEvent} className="btn">Закрыть</button>
        </div>
     </div>
   );
