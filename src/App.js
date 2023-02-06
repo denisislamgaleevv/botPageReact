@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import {React, useEffect} from 'react'
 import './App.css';
+import monkey from './pictures/1.jpg'
+const tg = window.Telegram.WebApp; 
 
 function App() {
+  useEffect(()=>{
+    tg.ready()
+  }, [])
+  const closeEvent =()=>{
+    tg.close()
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>  
+       <h1>It's work</h1>
+       <img src ={monkey} width ="300px" height = "400px"/>
+       <button onClick = {closeEvent}>Закрыть</button>
+       </div>
     </div>
   );
 }
